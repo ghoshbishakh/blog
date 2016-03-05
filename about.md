@@ -1,15 +1,13 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hi I am Bishakh Ghosh, an undergrad student at [National Institute of Technology, Durgapur](http://nitdgp.ac.in)
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+I am trying to be a developer and the tools I generally use are python, Django, HTML5, CSS3, bootstrap, JavaScript, JQuery, C.... and many more here and there.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Also I have implemented some network protocols with UDP and built some tools under awesome guidance of the [professors of MCN Research group](http://www.nitdgp.ac.in/MCN-RG/mcn-rg.html).
+
+This is the blog is where I will try to document some interesting stuff that I come accross while building stuff and fixing(/breaking) them.
