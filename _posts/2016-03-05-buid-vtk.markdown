@@ -1,0 +1,60 @@
+---
+layout: post
+title:  "Building VTK with python bindings in linux (arch)"
+date:   2016-03-05 13:48:00 +0530
+categories: blogpost
+---
+
+I came across [VTK](http://www.vtk.org/) while building the docs for [DIPY](http://nipy.org/dipy/) and what I needed was the python bindings.
+
+I use arch linux so installing from pacman is simple:
+
+{% highlight bash %}
+sudo pacman -S vtk
+{% endhighlight %}
+
+But this fails to install the python bindings properly and when you try: {% highlight python %}import vtk{% endhighlight %} it throws the error: {% highlight python %}ImportError: No module named vtkCommonPython{% endhighlight %}
+
+That leaves no other way except to build VTK from source including the python wrapper, for the python version you want to use vtk in.
+
+So here is the step by step procedure:
+--------------------------------------
+
+From [vtk website](http://www.vtk.org/) download the latest source tarball. For me it is VTK-7.0.0.tar.gz then extract it: {% highlight bash %}tar -xzvf VTK-7.0.0.tar.gz cd VTK-7.0.0{% endhighlight %}
+
+Now configure cmake properly for building python wrappers:{% highlight bash %}cmake .
+ccmake .{% endhighlight %} This will give you an interface like: ![vtk configure screenshot]({{ site.url }}/assets/vtk-screenshot.jpg)
+Now use yout arrow keys to select the option you want to change and press enter to change value.
+
+Toggle VTK_WRAP_PYTHON on.
+
+Toggle VTK_WRAP_TCL on.
+
+Change CMAKE_INSTALL_PREFIX to /usr
+
+Change VTK_PYTHON_VERSION to 2.7 (or the version of python you want to use vtk in)
+
+Now press [c] to configure
+
+Then press [g] to generate and exit
+
+Note: Sometimes you need to press c and g again.
+
+Now run: {% highlight bash %}make
+sudo make install{% endhighlight %}
+
+This will create a directory: Wrapping/Python
+
+Now install the python bindings:
+{% highlight bash %}cd Wrapping/Python
+make
+sudo make install{% endhighlight %}
+
+Hopefully that should install vtk properly.
+
+To check, in python run:
+{% highlight bash %}import vtk
+vtk.__file__{% endhighlight %}
+This should give something like:
+
+'/usr/lib/python2.7/site-packages/vtk/__init__.pyc'
