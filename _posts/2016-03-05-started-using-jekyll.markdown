@@ -10,7 +10,7 @@ And syntax highlighting yay!!
 
 {% highlight python %}
 def print_hi(name)
-  print(name)"
+  print(name)
 
 print_hi('Tom')
 # prints 'Hi, Tom' to STDOUT.
