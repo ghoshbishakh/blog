@@ -10,7 +10,7 @@ title: Build Break Fix
 email: ghoshbishakh@gmail.com
 description: >
   Life is short, stop arguing about emacs vs vim!
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://ghoshbishakh.github.io/blog" # the base hostname & protocol for your site
 twitter_username: iambishakh
 github_username:  ghoshbishakh
