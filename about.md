@@ -43,7 +43,9 @@ Syncing Data across Heterogeneous Devices
 Publications
 ------------
 
-1.  Partha Sarathi Paul and Bishakh Chandra Ghosh (National
+1.  On Design and Implementation of A Scalable And Reliable Sync System 
+For Delay Tolerant Challenged Networks
+	Partha Sarathi Paul and Bishakh Chandra Ghosh (National
 	Institute of Technology, Durgapur, India); Kingshuk De
 	(National Institute of Technology Durgapur, India); Sujoy Saha
 	(National Institute of Technology, India); Subrata Nandi
