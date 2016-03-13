@@ -44,7 +44,7 @@ Publications
 ------------
 
 1.  On Design and Implementation of A Scalable And Reliable Sync System 
-For Delay Tolerant Challenged Networks
+For Delay Tolerant Challenged Networks.
 	Partha Sarathi Paul and Bishakh Chandra Ghosh (National
 	Institute of Technology, Durgapur, India); Kingshuk De
 	(National Institute of Technology Durgapur, India); Sujoy Saha
