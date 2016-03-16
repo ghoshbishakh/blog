@@ -10,6 +10,12 @@
 			padding: 3px;
 			margin: 1px;
 			color: white;
+			transition: all 1s;
+		}
+		.chart div:hover {
+			background-color: #175264;
+			padding-bottom: 1em;
+			padding-top:1em;
 		}
 
 	</style>
@@ -56,7 +62,7 @@
 		    		allCharts.append("div").style("float", "left").text(function(d) { return d.login + " : " + d.contributions; })
 				    allCharts.append("img").style("float", "right").attr({"src": function(d){return d.avatar_url;}, "width": "40px"})
 
-				    document.getElementById("githubData").innerHTML = ""
+				    document.getElementById("githubData").innerHTML = "<h1>"+data.length + " conributors to "+repo+": </h1>";
 
 				}
 			};
