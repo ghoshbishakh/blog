@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Github D3 visualization</title>
+	<style>
+
+		.chart div {
+			background-color: steelblue;
+			text-align: right;
+			padding: 3px;
+			margin: 1px;
+			color: white;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="githubData"><h2>Github Data Visualization</h2></div>
+	<div class="chart">
+	</div>
+	<p>User/Organisation: </p><input type="text" id="org" value="nipy" />
+	<p>Repository: </p><input type="text" id="repo" value="dipy" />
+	<button type="button" onclick="loadDoc()">Fetch Github Data</button>
+
+
+
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript">
+		var data;
+		var chart = d3.select(".chart");
+		width = parseInt(chart.style('width')) - 20;
+		function loadDoc() {
+			document.getElementById("githubData").innerHTML = "Loading ... "
+			var usr = document.getElementById("org").value
+			var repo = document.getElementById("repo").value
+			document.getElementsByClassName("chart")[0].innerHTML = ""
+			
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					data = JSON.parse(xhttp.responseText);
+					var contribCount = []
+					for(var i = 0; i<data.length; i++){
+						contribCount[i] = data[i].contributions
+					}
+					// document.getElementById("githubData").innerHTML = vizStr;
+					var scaleData = d3.scale.linear()
+    				.domain([0, d3.max(contribCount)])
+    				.range([0, width]);
+
+					allCharts = chart.selectAll("div")
+					.data(data)
+		  			.enter().append("a").attr("href", function(d){return d.html_url;}).append("div")
+		    		.style({"width": function(d) { if(scaleData(d.contributions) > 40){return scaleData(d.contributions)+"px";} else{return 50+"px";} }, "overflow": "hidden"});
+
+		    		allCharts.append("div").style("float", "left").text(function(d) { return d.login + " : " + d.contributions; })
+				    allCharts.append("img").style("float", "right").attr({"src": function(d){return d.avatar_url;}, "width": "40px"})
+
+				    document.getElementById("githubData").innerHTML = ""
+
+				}
+			};
+			var url = "https://api.github.com/repos/"+usr+"/"+repo+"/contributors"
+			xhttp.open("GET", url, true);
+			xhttp.send();
+		} 
+	</script>
+</body>
+</html>
