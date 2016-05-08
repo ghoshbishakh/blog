@@ -3,6 +3,9 @@ layout: post
 title:  "Started Using Jekyll"
 date:   2016-03-05 12:16:53 +0530
 categories: blogpost
+tags:
+- personal
+- taste
 ---
 So started using jekyll for my blog!
 
