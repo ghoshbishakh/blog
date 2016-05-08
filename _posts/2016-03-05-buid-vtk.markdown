@@ -3,9 +3,7 @@ layout: post
 title:  "Building VTK with python bindings in linux (arch)"
 date:   2016-03-05 13:48:00 +0530
 categories: blogpost
-tags:
-- guides
-- linux
+tags: [guides, linux]
 ---
 
 I came across [VTK](http://www.vtk.org/) while building the docs for [DIPY](http://nipy.org/dipy/) and what I needed was the python bindings.
