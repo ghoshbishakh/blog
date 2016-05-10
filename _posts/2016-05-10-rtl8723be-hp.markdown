@@ -10,7 +10,7 @@ Till last year whenever I encountered a laptop with WiFi not working in linux it
 
 But this year things are different. Nearly all new HP laptops are having problems with WiFi in linux (ubuntu, arch, manjaro). And surprisingly the problem is not that the WiFi driver is not working at all. But it is worse, the signal strength received is so weak that it is absolutely unusable.
 
-A quick `lspci | grep Wireless` shows the Wireless Adapter in your system. In my case the device causing problem was:
+A quick `lspci | grep Wireless` shows the Wireless Adapter in your system. In my case the device causing problem was a Realtek:
 
 **RTL8723be**
 
@@ -22,7 +22,22 @@ After scanning through numerous threads I finally found the solution in this git
 So here is the step by step procedure to solve the issue:
 ---------------------------------------------------------
 
-First clone the [rtlwifi_new](https://github.com/lwfinger/rtlwifi_new) repository:
+First some make sure the dependencies for building the driver are installed:
+
+In Ubuntu:
+
+{% highlight bash %}
+sudo apt-get install build-essential git
+{% endhighlight %}
+
+In Arch:
+
+{% highlight bash %}
+sudo pacman -S git
+sudo pacman -S linux-headers
+{% endhighlight %}
+
+Now clone the [rtlwifi_new](https://github.com/lwfinger/rtlwifi_new) repository:
 
 {% highlight bash %}
 git clone git@github.com:lwfinger/rtlwifi_new.git
@@ -47,5 +62,5 @@ Now disable and enable the driver with proper parameters.
 
 {% highlight bash %}
 sudo modprobe -rv rtl8723be
-sudo modprobe -v rtl8723be ant_sel=1
+sudo modprobe -v rtl8723be ant_sel=2
 {% endhighlight %}
