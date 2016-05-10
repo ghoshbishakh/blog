@@ -10,7 +10,7 @@ Till last year whenever I encountered a laptop with WiFi not working in linux it
 
 But this year things are different. Nearly all new HP laptops are having problems with WiFi in linux (ubuntu, arch, manjaro). And surprisingly the problem is not that the WiFi driver is not working at all. But it is worse, the signal strength received is so weak that it is absolutely unusable.
 
-A quick {% highlight bash %}lspci | grep Wireless{% endhighlight %} shows the Wireless Adapter in your system. In my case it is the device causing problem was:
+A quick `lspci | grep Wireless` shows the Wireless Adapter in your system. In my case the device causing problem was:
 
 **RTL8723be**
 
