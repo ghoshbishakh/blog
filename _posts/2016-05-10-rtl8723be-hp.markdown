@@ -3,6 +3,7 @@ layout: post
 title:  "Making rtl8723be Wireless Adapter Work In Linux"
 date:   2016-03-05 20:00:00 +0530
 categories: blogpost
+comments: true
 tags: [guides, linux]
 ---
 
