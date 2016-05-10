@@ -15,5 +15,7 @@ url: "http://ghoshbishakh.github.io/blog" # the base hostname & protocol for you
 twitter_username: iambishakh
 github_username:  ghoshbishakh
 
+excerpt_separator: <!--more-->
+
 # Build settings
 markdown: kramdown

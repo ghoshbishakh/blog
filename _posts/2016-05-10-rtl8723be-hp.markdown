@@ -9,7 +9,7 @@ tags: [guides, linux]
 
 Till last year whenever I encountered a laptop with WiFi not working in linux it was a [Broadcom Wireless Adapter](https://wiki.archlinux.org/index.php/Broadcom_wireless#History).
 
-But this year things are different. Nearly all new HP laptops are having problems with WiFi in linux (ubuntu, arch, manjaro). And surprisingly the problem is not that the WiFi driver is not working at all. But it is worse, the signal strength received is so weak that it is absolutely unusable.
+But this year things are different.<!--more--> Nearly all new HP laptops are having problems with WiFi in linux (ubuntu, arch, manjaro). And surprisingly the problem is not that the WiFi driver is not working at all. But it is worse, the signal strength received is so weak that it is absolutely unusable.
 
 A quick `lspci | grep Wireless` shows the Wireless Adapter in your system. In my case the device causing problem was a Realtek:
 
