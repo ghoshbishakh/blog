@@ -65,4 +65,4 @@ sudo modprobe -rv rtl8723be
 sudo modprobe -v rtl8723be ant_sel=2
 {% endhighlight %}
 
-NOTE: if this does not work try: `sudo modprobe -v rtl8723be ant_sel=1`
+NOTE: If this does not work try: `sudo modprobe -v rtl8723be ant_sel=1`
