@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "Making rtl8723be Wireless Adapter Work In Linux"
+date:   2016-03-05 20:00:00 +0530
+categories: blogpost
+tags: [guides, linux]
+---
+
+Till last year whenever I encountered a laptop with WiFi not working in linux it was a [Broadcom Wireless Adapter](https://wiki.archlinux.org/index.php/Broadcom_wireless#History).
+
+But this year things are different. Nearly all new HP laptops are having problems with WiFi in linux (ubuntu, arch, manjaro). And surprisingly the problem is not that the WiFi driver is not working at all. But it is worse, the signal strength received is so weak that it is absolutely unusable.
+
+A quick {% highlight bash %}lspci | grep Wireless{% endhighlight %} shows the Wireless Adapter in your system. In my case it is the device causing problem was:
+
+**RTL8723be**
+
+After scanning through numerous threads I finally found the solution in this github issue:
+
+[https://github.com/lwfinger/rtlwifi_new/issues/88](https://github.com/lwfinger/rtlwifi_new/issues/88)
+
+
+So here is the step by step procedure to solve the issue:
+---------------------------------------------------------
+
+First clone the [rtlwifi_new](https://github.com/lwfinger/rtlwifi_new) repository:
+
+{% highlight bash %}
+git clone git@github.com:lwfinger/rtlwifi_new.git
+{% endhighlight %}
+
+Checkout the branch rock.new_btcoex
+{% highlight bash %}
+cd rtlwifi_new
+git checkout rock.new_btcoex
+{% endhighlight %}
+
+Now build and install the driver
+
+{% highlight bash %}
+make
+sudo make install
+{% endhighlight %}
+
+Reboot the system.
+
+Now disable and enable the driver with proper parameters.
+
+{% highlight bash %}
+sudo modprobe -rv rtl8723be
+sudo modprobe -v rtl8723be ant_sel=1
+{% endhighlight %}
