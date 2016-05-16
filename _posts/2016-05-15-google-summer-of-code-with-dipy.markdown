@@ -9,7 +9,7 @@ tags: [personal, gsoc]
 
 I know I am a bit late with this blogpost, but as you probably guessed from the title I made it into Google Summer of Code 2016!!<!--more-->
 
-Throught this summer I will be working with [DIPY](http://nipy.org/dipy/) under the Python Software Foundation.
+Through out this summer I will be working with [DIPY](http://nipy.org/dipy/) under the Python Software Foundation.
 
 ### So how did I make it?
 To be frank although I dreamt of getting into GSOC from 10th standard I never tried it whole heartedly before. And it was partly because I did not know how and where to start.
