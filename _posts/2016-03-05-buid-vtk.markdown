@@ -24,7 +24,7 @@ So here is the step by step procedure:
 From [vtk website](http://www.vtk.org/) download the latest source tarball. For me it is VTK-7.0.0.tar.gz then extract it: {% highlight bash %}tar -xzvf VTK-7.0.0.tar.gz cd VTK-7.0.0{% endhighlight %}
 
 Now configure cmake properly for building python wrappers:{% highlight bash %}cmake .
-ccmake .{% endhighlight %} This will give you an interface like: ![vtk configure screenshot]({{ site.url }}/assets/vtk-screenshot.jpg)
+ccmake .{% endhighlight %} This will give you an interface like: ![vtk configure screenshot]({{ site.url }}{{ site.baseurl }}/assets/vtk-screenshot.jpg)
 Now use your arrow keys to select the option you want to change and press enter to change value.
 
 Toggle VTK_WRAP_PYTHON on.
