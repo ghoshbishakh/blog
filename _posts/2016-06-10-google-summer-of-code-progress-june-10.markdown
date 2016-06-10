@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Google Summer of Code Progress: June 10"
+title:  "Google Summer of Code Progress June 10"
 date:   2016-06-10 11:34:14 +0530
 categories: blogpost
 comments: true
