@@ -73,3 +73,22 @@ def youtube_embed_url(value):
         processed_str = processed_str.replace(match[0], template % match[2])
     return processed_str
 {% endhighlight %}
+
+#### News Posts:
+
+News posts are simple models for storing news with post dates. Most recent news are displayed in the home page.
+
+#### Publications:
+
+Publications are Journal/Conference/Book Chapter publications or any other literature about Dipy that people may want to know about or cite.
+
+One important information about the publications that people often seek is the bibtex. Also the publication information can be extracted from the bibtex only. So instead of entering all details of the publications in a form, the content editor can only enter the bibtex and the model can be autometically populated by parsing the bibtex. For parsing bibtex instead of writing a new parser from scratch I have used [bibtexparser](https://pypi.python.org/pypi/bibtexparser/0.6.2) library.
+
+Another property of the publications is that they can be marked as highlighted and the highlighted publications can be displayed separately in the home page or anywhere else.
+
+
+### Some more thoughts on the GSOC journey so far
+
+I just love it :) Especially because of my mentors. We have weekly video call meetings where a very specific set of targets are set for the coming week. This helps to maintain my focus in a particular direction. Also there is regular exchange of mails throught the week. They also go through my code every week and give feedback, so I am always trying to be very careful and make less mistakes :P
+
+They inspire me to work harder.
