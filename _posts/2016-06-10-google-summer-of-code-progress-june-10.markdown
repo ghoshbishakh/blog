@@ -23,7 +23,7 @@ This is done by fetching repository information from GitHub API:
 {% highlight %}GET https://api.github.com/orgs/:org/repos{% endhighlight %}
 
 The resonse contains permission information like:
-{% highlight %}"permissions": {
+{% highlight json %}"permissions": {
       "admin": false,
       "push": false,
       "pull": true
