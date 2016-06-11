@@ -7,7 +7,7 @@ comments: true
 tags: [personal, gsoc]
 ---
 
-So it has been about 20 days since the coding perood has begun. I have made some decent progress with the backend of the Dipy website.
+So it has been about 20 days since the coding period has begun. I have made some decent progress with the backend of the Dipy website.
 <!--more-->
 
 The target that was set according the timeline of my proposal was setting up an authentication system and login with github in Django along with custom admin panel views for content management.
@@ -29,7 +29,7 @@ The resonse contains permission information like:
       "pull": true
     }{% endhighlight %}
 
-So if a user has push:ture permission then he/she has push access to the dipy_web repository and that user is granted permission to edit the content of the website.
+So if a user has push:true permission then he/she has push access to the dipy_web repository and that user is granted permission to edit the content of the website.
 
 
 Now there are several type of contents and each type has its own model:
@@ -43,7 +43,7 @@ Now there are several type of contents and each type has its own model:
 
 #### Website Sections:
 
-The website sections contains some identifiers like which page it belongs to and in which position it should be placed. The content body of the website section is written in markdown. To change the markdown to HTML the [markdown](https://pythonhosted.org/Markdown/) library is used. The model's save() method is ovrerided so that each time it is edited, the new HTML is generated from the markdown. The HTML is filtered using the [bleach](http://bleach.readthedocs.io/) library.
+The website sections contains some identifiers like which page it belongs to and in which position it should be placed. The content body of the website section is written in markdown. To change the markdown to HTML the [markdown](https://pythonhosted.org/Markdown/) library is used. The model's save() method is overrided so that each time it is edited, the new HTML is generated from the markdown. The HTML is filtered using the [bleach](http://bleach.readthedocs.io/) library.
 
 {% highlight python %}
 def save(self, *args, **kwargs):
@@ -82,7 +82,7 @@ News posts are simple models for storing news with post dates. Most recent news 
 
 Publications are Journal/Conference/Book Chapter publications or any other literature about Dipy that people may want to know about or cite.
 
-One important information about the publications that people often seek is the bibtex. Also the publication information can be extracted from the bibtex only. So instead of entering all details of the publications in a form, the content editor can only enter the bibtex and the model can be autometically populated by parsing the bibtex. For parsing bibtex instead of writing a new parser from scratch I have used [bibtexparser](https://pypi.python.org/pypi/bibtexparser/0.6.2) library.
+One important information about the publications that people often seek is the bibtex. Also the publication information can be extracted from the bibtex only. So instead of entering all details of the publications in a form, the content editor can only enter the bibtex and the model can be automatically populated by parsing the bibtex. For parsing bibtex instead of writing a new parser from scratch I have used [bibtexparser](https://pypi.python.org/pypi/bibtexparser/0.6.2) library.
 
 Another property of the publications is that they can be marked as highlighted and the highlighted publications can be displayed separately in the home page or anywhere else.
 
