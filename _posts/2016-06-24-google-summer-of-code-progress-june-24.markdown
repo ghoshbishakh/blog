@@ -29,6 +29,9 @@ The custom CMS now allows maximum flexibility. It is possible to edit almost eve
 
 One of the most important additions in the CMS is that now we can create any number of pages and we will get a url for that page. So this allows us to create any custom page and link it from anywhere. Also with a single click that page can be put in the nav bar.
 
+![dipy page editor screenshot]({{ site.url }}{{ site.baseurl }}/assets/dipy6.png)
+
+
 To make the the nav bar dynamic I had to pass the same context to every template. Thankfully this can be achieved with "context_processors" in a dry way.
 Also this allows the documentation links to be changed without changing the template.
 
@@ -82,3 +85,14 @@ Although most parts of the website now have a basic styling, the frontend is sti
 ![dipy cite page screenshot]({{ site.url }}{{ site.baseurl }}/assets/dipy3.jpeg)
 
 ![dipy support page screenshot]({{ site.url }}{{ site.baseurl }}/assets/dipy5.jpeg)
+
+
+### What's next
+
+We have to automate the documentation generation process. A build server will be triggered whenever there is a new commit the documentation will be automatically updated in the website. Also there are some command line tools for which the docs must be generated.
+
+I have to include facebook feed in the home page. Also the honeycomb gallery is cool but a carousal with up-to-date contents like upcoming events and news will be more useful. The styling of all parts of the website can be improved.
+
+Then I have to clean up the code a bit and add some more documentation and start testing the internals. After that we have to think of deployment and things like search engine optimization and caching etc.
+
+Will be back with more updates soon! :)
