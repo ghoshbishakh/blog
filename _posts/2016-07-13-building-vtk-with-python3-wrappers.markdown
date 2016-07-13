@@ -51,7 +51,7 @@ Press **t** to toggle to Advanced mode.
 
 ![VTK configure screenshot 2]({{ site.url }}{{ site.baseurl }}/assets/vtk-2-2.png)
 
-###Now change the following:
+### Now change the following:
 
 Toggle BUILD_TESTING on.
 
