@@ -43,13 +43,13 @@ ccmake ../vtk
 
 We will see a screen like this:
 
-![VTK configure screenshot 1]({{ site.url }}{{ site.baseurl }}/assets/vtk2-1.png)
+![VTK configure screenshot 1]({{ site.url }}{{ site.baseurl }}/assets/vtk-2-1.png)
 
 Now press **c** to configure. After configuring several options should appear.
 
 Press **t** to toggle to Advanced mode.
 
-![VTK configure screenshot 2]({{ site.url }}{{ site.baseurl }}/assets/vtk2-2.png)
+![VTK configure screenshot 2]({{ site.url }}{{ site.baseurl }}/assets/vtk-2-2.png)
 
 ###Now change the following:
 
