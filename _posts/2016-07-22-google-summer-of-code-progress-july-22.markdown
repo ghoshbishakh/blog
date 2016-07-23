@@ -23,6 +23,8 @@ Google analytics has been integrated for monitoring traffic.
 
 There are many performance optimizations like introducing a layer of cache and enabling GZipping middleware. Now the google page speed score is even higher than the older website of dipy.
 
+![dipy page speed]({{ site.url }}{{ site.baseurl }}/assets/dipy11.jpeg)
+
 All pages of the website has meta tags for search engine optimizations.
 
 And of course there has been lots of bug fixes and the website scales a lot better in mobile devices.
