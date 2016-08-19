@@ -14,7 +14,7 @@ So we are at the end of this awesome summer and this post is about the progress 
 ## GitHub stats visualization
 As we had planned, the new Dipy website needed a page to highlight the growing number of developers and their contributions to the Dipy project. And finally we have achieved that with a [separate django app](https://github.com/nipy/dipy_web/tree/master/github_visualization) that creates visualizations with data pulled from GitHub API, and for drawing some neat graphs I have used the [Chart.js](http://www.chartjs.org/) library.
 
-![dipy github visualization page]({{ site.url }}{{ site.baseurl }}/assets/dipy14.jpeg)
+![dipy github visualization page]({{ site.url }}{{ site.baseurl }}/assets/dipy14.jpg)
 
 ---------------------------------------
 
